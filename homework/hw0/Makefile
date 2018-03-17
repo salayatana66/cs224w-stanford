@@ -7,8 +7,8 @@ include Makefile.config
 ## Main application file
 
 # COMPILE
-q1: q1.cpp $(CSNAP)/Snap.o
-	$(CC) $(CXXFLAGS) -o $@ $@.cpp $(CSNAP)/Snap.o -I$(CSNAP) -I$(CGLIB) $(LDFLAGS) $(LIBS)
+q1.o: q1.cpp $(CSNAP)/Snap.o
+	$(CC) $(CXXFLAGS) -o q1.o q1.cpp $(CSNAP)/Snap.o -I$(CSNAP) -I$(CGLIB) $(LDFLAGS) $(LIBS)
 
 $(CSNAP)/Snap.o:
 	$(MAKE) -C $(CSNAP)
