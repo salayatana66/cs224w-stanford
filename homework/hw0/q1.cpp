@@ -52,5 +52,24 @@ for(auto sI = leftEdge.cbegin(); sI != leftEdge.cend(); sI++) {
      != rightEdge.cend()) recEdge++;
  }
 							 
-   printf("Number of reciprocated edges\t%d\n", recEdge);   
+   printf("Number of reciprocated edges\t%d\n", recEdge);
+// nodes with zero out-degree
+// nodes with zero in-degree
+std::set<int> zeroIn, zeroOut;
+for(auto nI = G->BegNI(); nI < G->EndNI(); nI++) {
+  if(nI.GetInDeg() == 0) zeroIn.insert(nI.GetId());
+  if(nI.GetOutDeg() == 0) zeroOut.insert(nI.GetId());
+ }
+printf("Number of nodes with zero out-degree\t%d\n", zeroOut.size());
+printf("Number of nodes with zero in-degree \t%d\n", zeroIn.size());
+// nodes with out-degree > 10
+// nodes with in-degree < 10
+std::set<int> tenIn, tenOut;
+for(auto nI = G->BegNI(); nI < G->EndNI(); nI++) {
+  if(nI.GetInDeg() < 10) tenIn.insert(nI.GetId());
+  if(nI.GetOutDeg() > 10) tenOut.insert(nI.GetId());
+ }
+printf("Number of nodes with out-degree > 10\t%d\n", tenOut.size());
+printf("Number of nodes with in-degree < 10 \t%d\n", tenIn.size());
+
 }
