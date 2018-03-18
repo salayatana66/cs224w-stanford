@@ -15,6 +15,9 @@ q1.o: q1.cpp $(CSNAP)/Snap.o
 q2.o: q2.cpp $(CSNAP)/Snap.o
 	$(CC) $(CXXFLAGS) -o q2.o q2.cpp $(CSNAP)/Snap.o -I$(CSNAP) -I$(CGLIB) $(LDFLAGS) $(LIBS)
 
+q3.o: q3.cpp $(CSNAP)/Snap.o
+	$(CC) $(CXXFLAGS) -o q3.o q3.cpp $(CSNAP)/Snap.o -I$(CSNAP) -I$(CGLIB) $(LDFLAGS) $(LIBS)
+
 
 $(CSNAP)/Snap.o:
 	$(MAKE) -C $(CSNAP)
