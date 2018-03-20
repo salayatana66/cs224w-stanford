@@ -1,0 +1,5 @@
+--------
+/mnt/notebooks/cs224w-stanford/homework/hw1/q1.o.Err
+Tue Mar 20 17:33:00 2018
+Execution stopped: IsNode(SrcNId) && IsNode(DstNId) [Reason:'1707 or 5242 not a node.'], file graph.cpp, line 93
+--------
